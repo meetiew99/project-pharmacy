@@ -1,0 +1,170 @@
+Functional Requirements for Pharmacy Management System: PharmEase
+Modules: User Registration, Login and Profile Management, Medicine Management, Inventory Management, Sales Management, Prescription Management, Supplier Management, Customer Management, Financial Management, Reporting and Analytics, API Integration
+1. User Registration, Login, and Profile Management
+Description: The system must allow pharmacy staff to create accounts, log in, and manage their profiles.
+Roles: Pharmacist, Administrator, Staff
+User Registration:
+
+Pharmacist, Administrator, and Staff should be able to register for an account by providing their full name, email address, contact number, and a password.
+Pharmacist, Administrator, and Staff must receive a verification email to confirm their email address for account activation.
+The system should validate that the email address is unique and in a valid format.
+User Login:
+
+Registered Pharmacist, Administrator, and Staff should be able to log in using their email and password.
+Pharmacist, Administrator, and Staff must be able to reset their passwords if they forget them, through a "Forgot Password" link. They should receive a password reset email with instructions.
+Profile Management:
+
+After logging in, Pharmacist, Administrator, and Staff should have access to their profile page, where they can update their contact information, including email and contact number.
+Pharmacist, Administrator, and Staff can change their password by providing the current password and a new one.
+2. Medicine Management
+Description: The system must allow pharmacy staff to manage details related to medicines.
+Roles: Pharmacist, Staff
+Medicine Records:
+
+Pharmacist and Staff should be able to add, update, and delete medicine details such as name, manufacturer, batch number, expiry date, and price.
+The system should validate that each medicine entry is unique and contains all necessary information.
+Stock Management:
+
+Pharmacist and Staff can record the quantity of each medicine in stock.
+The system should automatically update stock levels upon sales and restocking.
+3. Inventory Management
+Description: The system must track inventory levels and manage restocking processes.
+Roles: Pharmacist, Administrator
+Inventory Tracking:
+
+Pharmacist and Administrator should be able to monitor inventory levels for all medicines.
+The system should provide alerts for low stock levels and track reorder points.
+Restocking:
+
+Pharmacist and Administrator can generate purchase orders for restocking medicines.
+The system should allow tracking of orders and updating inventory upon receipt of new stock.
+4. Sales Management
+Description: The system must handle the sales process, including transactions and receipts.
+Roles: Pharmacist, Staff
+Sales Transactions:
+
+Pharmacist and Staff should be able to record sales transactions, including details of medicines sold, quantities, prices, and customer information.
+The system should generate receipts for customers and update inventory levels accordingly.
+Discount and Promotions:
+
+The system should support applying discounts and promotions during sales transactions.
+Pharmacist and Staff should be able to create and manage discount codes and promotional offers.
+5. Prescription Management
+Description: The system must manage prescription details and ensure regulatory compliance.
+Roles: Pharmacist
+Prescription Records:
+
+Pharmacist should be able to record and manage prescription details, including patient information, prescribing doctor, and prescribed medicines.
+The system should validate prescriptions for accuracy and compliance with regulations.
+Prescription Fulfillment:
+
+Pharmacist can fulfill prescriptions by dispensing the prescribed medicines.
+The system should track fulfilled prescriptions and update inventory levels.
+6. Supplier Management
+Description: The system must manage relationships with suppliers and track orders.
+Roles: Pharmacist, Administrator
+Supplier Records:
+
+Pharmacist and Administrator should be able to record and manage supplier details, including contact information and terms of trade.
+The system should validate and ensure data consistency for all supplier records.
+Order Management:
+
+Pharmacist and Administrator can create and manage purchase orders to suppliers.
+The system should track order status and update inventory upon receipt of goods.
+7. Customer Management
+Description: The system must manage customer details and enhance customer service.
+Roles: Pharmacist, Staff
+Customer Records:
+
+Pharmacist and Staff should be able to record and manage customer details, including contact information and purchase history.
+The system should validate and ensure data consistency for all customer records.
+Loyalty Programs:
+
+The system should support customer loyalty programs, including tracking points and rewards.
+Pharmacist and Staff should be able to manage and redeem customer loyalty points.
+8. Financial Management
+Description: The system must handle financial transactions, including expenses, revenues, and payroll.
+Roles: Administrator, Accountant
+Expense Management:
+
+Administrator and Accountant should be able to record and categorize expenses related to pharmacy operations.
+The system should generate expense reports and track budget compliance.
+Revenue Tracking:
+
+Administrator and Accountant can record revenues from sales transactions.
+The system should generate financial statements and profit analysis reports.
+Payroll Management:
+
+Administrator and Accountant should be able to manage payroll information, including employee salaries and wage calculations.
+The system should generate payroll reports and support integration with financial software.
+9. Reporting and Analytics
+Description: The system must provide comprehensive reporting and analytics capabilities.
+Roles: Administrator, Pharmacist
+Operational Reports:
+
+Administrator and Pharmacist should be able to generate reports on inventory levels, sales transactions, and prescription fulfillment.
+The system should offer customizable report templates for different operational needs.
+Financial Reports:
+
+Administrator and Pharmacist can produce financial statements, expense reports, and profit analysis.
+The system should provide data visualization tools for better financial insights.
+Compliance Reports:
+
+Administrator and Pharmacist should be able to generate reports to ensure compliance with pharmaceutical regulations.
+The system should support data export for regulatory submissions.
+10. API Integration
+Description: The system must integrate with existing systems such as accounting software, supply chain management, and CRM.
+Roles: Developer, Administrator
+External System Integration:
+
+Developer and Administrator should ensure the system provides APIs for integration with external accounting and supply chain management systems.
+The system should support data exchange and synchronization with CRM systems.
+Data Flow Management:
+
+Developer and Administrator should ensure smooth data flow between different systems and modules.
+The system should provide tools for monitoring and managing data integration processes.
+Non-Functional Requirements
+Performance
+
+The system must support concurrent access by up to 200 users without significant degradation in performance.
+Ensure quick response times for data retrieval and processing tasks.
+Reliability
+
+Ensure an uptime of 99.9% with robust backup and disaster recovery plans.
+Implement automated data backup procedures with off-site storage options.
+Security
+
+Implement role-based access control to safeguard sensitive data.
+Encrypt sensitive data both in transit and at rest to prevent unauthorized access.
+Architecture of the Software
+System Architecture
+The proposed Pharmacy Management System (PharmEase) will be designed using a three-tier architecture:
+
+Presentation Layer
+
+Components: Web browser interface and mobile application.
+Technologies: HTML, CSS, JavaScript (React.js for web, React Native for mobile).
+Purpose: Provides the user interface for interacting with the system. It allows users to input data, view reports, and manage pharmacy activities.
+Business Logic Layer
+
+Components: Application server.
+Technologies: Node.js with Express.js framework.
+Purpose: Processes user requests, implements business rules, and handles the core functionality of the system. It acts as a bridge between the presentation layer and the data layer.
+Data Layer
+
+Components: Database server.
+Technologies: PostgreSQL for relational data storage.
+Purpose: Stores all the system's data including medicine records, inventory, financial transactions, and user information. Ensures data integrity and efficient data retrieval.
+Justification for Technological Stack
+React.js and React Native: Chosen for their efficiency in building responsive and dynamic user interfaces. React Native allows for code reuse between web and mobile applications, reducing development time and costs.
+Node.js and Express.js: Selected for their ability to handle concurrent operations efficiently. Node.js is known for its non-blocking, event-driven architecture, making it suitable for applications requiring high performance and scalability.
+PostgreSQL: Opted for its robustness, scalability, and support for complex queries. PostgreSQL is an open-source relational database management system known for reliability and data integrity, making it a solid choice for handling the comprehensive data needs of the system.
+This architectural setup ensures that the system is modular, scalable, and easy to maintain. The use of modern and widely adopted technologies ensures that the system will be performant and secure, with a strong foundation for future enhancements and integrations.
+
+Team Roles
+Project Manager: Emma Tan
+Responsible for project planning, execution, and delivery. Ensures the project meets its deadlines and stays within budget.
+Lead Software Developer: John Lee
+Oversees the technical aspects of the project. Responsible for the system's architecture and ensuring the quality of the code.
+Frontend Developer: Sarah Lim
+Develops the user interface for the web and mobile
