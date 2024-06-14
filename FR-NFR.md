@@ -18,3 +18,6 @@ The system should validate that the email address is unique and in a valid forma
 ####	Medicine Management
 - Pharmacist should be able to add, update, and delete medicine details such as name, manufacturer, batch number, expiry date, and price.
 -	The system should validate that each medicine entry is unique and contains all necessary information//
+
+
+# GJ !
